@@ -42,7 +42,7 @@ function App() {
 
   const fetchCountries = async () => {
     try {
-      const response = await fetch('https://restcountries.com/v3.1/all?fields=name,capital,population,region,subregion,languages,currencies,flags,cca3,area,timezones,borders');
+      const response = await fetch('https://restcountries.com/v3.1/all');
       const data = await response.json();
       
       // Ma'lumot array ekanligini tekshirish
