@@ -42,11 +42,17 @@ function App() {
 
   const fetchCountries = async () => {
     try {
+      console.log('API ga so\'rov yuborilmoqda...');
       const response = await fetch('https://restcountries.com/v3.1/all');
+      console.log('API javob holati:', response.status);
       const data = await response.json();
+      console.log('API dan kelgan ma\'lumot:', data);
+      console.log('Ma\'lumot turi:', typeof data);
+      console.log('Array ekanmi:', Array.isArray(data));
       
       // Ma'lumot array ekanligini tekshirish
       if (Array.isArray(data)) {
+        console.log('Mamlakatlar soni:', data.length);
         setCountries(data);
       } else {
         console.error('API dan kelgan ma\'lumot array emas:', data);
@@ -61,6 +67,7 @@ function App() {
   };
 
   const filterCountries = () => {
+    console.log('Filtrlash boshlandi. Countries soni:', countries.length);
     let filtered = countries;
 
     if (searchTerm) {
@@ -74,6 +81,7 @@ function App() {
       filtered = filtered.filter(country => country.region === selectedRegion);
     }
 
+    console.log('Filtrlangan mamlakatlar soni:', filtered.length);
     setFilteredCountries(filtered);
   };
 
