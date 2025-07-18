@@ -43,7 +43,7 @@ function App() {
   const fetchCountries = async () => {
     try {
       console.log('API ga so\'rov yuborilmoqda...');
-      const response = await fetch('https://restcountries.com/v3.1/all');
+      const response = await fetch('https://restcountries.com/v3.1/all?fields=name,capital,population,region,subregion,languages,currencies,flags,cca3,area,timezones,borders');
       console.log('API javob holati:', response.status);
       const data = await response.json();
       console.log('API dan kelgan ma\'lumot:', data);
