@@ -25,8 +25,8 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       label: 'Elektron pochta',
-      value: 'kamola.abduvaxobova@gmail.com',
-      href: 'mailto:kamola.abduvaxobova@gmail.com',
+      value: 'abduvaxobovakamola07@gmail.com',
+      href: 'mailto:abduvaxobovakamola07@gmail.com',
     },
     {
       icon: Phone,
